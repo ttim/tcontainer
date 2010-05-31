@@ -1,0 +1,15 @@
+<module name="example">
+    <import bean="repeat-count" class="java.lang.Integer"/>
+    <import bean="prefix" class="java.lang.String"/>
+
+    <bean name="writer" class="example.concrete.Writer"/>
+    <bean name="reader" class="example.concrete.Reader"/>
+    <bean name="copier" class="example.concrete.Copier" lazy="false">
+        <property name="Writer" ref="writer"/>
+        <property name="Reader" ref="reader"/>
+        <property name="RepeatCount" ref="repeat-count"/>
+        <property name="Prefix" ref="prefix"/>        
+    </bean>
+
+    <export bean="copier"/>
+</module>

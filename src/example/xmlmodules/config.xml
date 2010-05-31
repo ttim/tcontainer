@@ -1,0 +1,11 @@
+<module name="config">
+    <bean name="repeat-count">
+        <value><int>5</int></value>
+    </bean>
+    <bean name="prefix">
+        <value><string>This is prefix YEAHHH !</string></value>
+    </bean>
+
+    <export bean="repeat-count"/>
+    <export bean="prefix"/>
+</module>
